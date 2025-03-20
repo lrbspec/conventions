@@ -23,7 +23,7 @@ the length is assumed to be written before the text data.
 
 `string with u32 length and utf-16 encoding` describes a string that writes a u32 for the number of codeunits followed by that many utf-16 encoded codeunits (two bytes each).
 
-`fixedstring[256] with ascii encoding and null-termination` describes a string that writes up to 256 code units of ascii (one byte each just like utf-8) and writes a null terminator at the end if it wrote less than 256 bytes.
+`fixedstring[256] with ascii encoding and null-termination` describes a string that writes 256 code units of ascii (one byte each just like utf-8) and writes a null terminator at the end of the text if it is less than 256 bytes. (the entire fixedstring always takes up 256 bytes but the length of the contents written may be less than 256 with null termination)
 
 ***
 ### null terminated strings
